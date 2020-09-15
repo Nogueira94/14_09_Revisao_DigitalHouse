@@ -1,12 +1,12 @@
-package br.digital.com.Revisao
+package aula14_09
 
-class Professor (var RD: String) : Pessoa () {
+class Professor (var RD: String,nome: String,sobrenome: String) : Pessoa(nome, sobrenome) {
 
-    override fun aula () {
-        println("Apresentando a aula.")
+    override fun aula (aula: Aula) {
+        println("Apresentando a aula ${aula.nome}.")
     }
 
-    fun fazerChamada () {
-        println("Fazendo chamada.")
+    fun fazerChamada (aula : Aula) {
+        println("Fazendo chamada da aula ${aula.nome}.")
     }
 }
